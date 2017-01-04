@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/user/companies', 'UserCompanyController@index');
+Route::get('/user/projects', 'ProjectController@index');

@@ -31,4 +31,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Company::class);
     }
+
+    public function projects()
+    {
+        // params are: Related model (Project), Table [view] (user_company_project_view), and the foreign key (user_id)
+        return $this->belongsToMany(Project::class, 'user_company_project_view', 'user_id');
+    }
 }
